@@ -28,3 +28,14 @@ void PrintArray(string[] arr)
     Console.Write("] ");
 }
 
+string[] SecondArray(int min, int max, string[] array)
+{
+    Random rnd = new Random();
+    string[] arr = new string[rnd.Next(min, max + 1)];
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = array[rnd.Next(0, array.Length)];
+    }
+    return arr;
+}
+
